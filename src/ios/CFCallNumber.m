@@ -12,7 +12,7 @@
         number = [number stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 
         if( ! [number hasPrefix:@"tel:"]){
-            number =  [NSString stringWithFormat:@"tel:%@", number];
+            number =  [NSString stringWithFormat:@"telprompt:%@", number];
         }
 
         if(![[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:number]]) {
